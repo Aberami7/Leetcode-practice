@@ -1,11 +1,13 @@
 class Solution {
     public int minimizedStringLength(String s) {
-        Set<Character> set=new HashSet<>();
+        List<Character> list=new ArrayList<>();
         for(int i=0;i<s.length();i++)
         {
-            set.add(s.charAt(i));
+            if(!list.contains(s.charAt(i))){
+            list.add(s.charAt(i));
+            }
         }
-        return set.size();
+        return list.size();
         
     }
 }
