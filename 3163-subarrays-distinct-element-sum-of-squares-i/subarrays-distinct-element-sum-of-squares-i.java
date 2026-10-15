@@ -5,13 +5,20 @@ class Solution {
         {
             sum+=1;
         }
+        int[] z=new int[nums.size()];
+        int k=0;
+        for(int a:nums)
+        {
+            z[k++]=a;
+        }
         for(int i=0;i<nums.size();i++)
         {
            
             for(int j=i+1;j<nums.size();j++)
                 {
-                    
-                    List<Integer> arr=nums.subList(i,j+1);  
+                    int[] arr=new int[j];
+                    arr=Arrays.copyOfRange(z,i,j+1);  
+    
                     Set<Integer> set=new HashSet<>();
                     for(int a:arr)
                         {
